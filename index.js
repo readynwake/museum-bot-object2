@@ -45,7 +45,7 @@ app.post('/', function (request, response) {
             let responseToUser = { fulfillmentText: obj[object][how][why]};
             sendResponse(responseToUser);
         },
-        
+
         'object.what.how': () => {
             let responseToUser = { fulfillmentText: obj[object][what][how]};
             sendResponse(responseToUser);
@@ -70,7 +70,12 @@ app.post('/', function (request, response) {
             let responseToUser = { fulfillmentText: obj[object][where][how]};
             sendResponse(responseToUser);
         },
-       
+        
+        'object.who.how': () => {
+            let responseToUser = { fulfillmentText: obj[object][who][how]};
+            sendResponse(responseToUser);
+        },
+              
         'other.object.how': () => {
             let responseToUser = { fulfillmentText: obj[other][object][how]};
             sendResponse(responseToUser);
