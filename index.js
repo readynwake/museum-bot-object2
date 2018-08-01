@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true })); //
 var fs = require('fs');
 var obj = JSON.parse(fs.readFileSync('info.json', 'utf8'));
 
-console.log('Answer: ' + obj['석곽묘']['정의']); //// debugging
+console.log('Answer: ' + obj['금동신발']['정의']); //// debugging
 
 app.post('/', function (request, response) {
     console.log('request: \n' + JSON.stringify(request.body));
